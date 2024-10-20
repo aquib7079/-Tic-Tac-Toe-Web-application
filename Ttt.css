@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #d9a7c7, #fffcdc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    width: 350px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .score {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .playerX {
+    color: #007bff;
+  }
+  
+  .playerO {
+    color: #ff7b00;
+  }
+  
+  .turn-indicator {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cell:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .cell[data-value="X"] {
+    color: #007bff;  /* Color for Cross (X) */
+  }
+  
+  .cell[data-value="O"] {
+    color: #ff7b00;  /* Color for Circle (O) */
+  }
+  
+  .winning-cell {
+    background-color: #28a745 !important;
+    color: white !important;
+  }
+  
+  button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #007bff, #00D4FF);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #0056b3, #00D4FF);
+  }
+  
+  #statusMessage {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  
